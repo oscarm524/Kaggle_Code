@@ -314,17 +314,10 @@ def add_risk_indicator_features(df):
         df['PaymentMethod'] == "Electronic check"
     ).astype(int)
     
-    # No protection + month-to-month
-    df['NoProtection_MonthToMonth'] = (
-        (df['HasProtection'] == 0) &
-        (df['Contract'] == "Month-to-month")
-    ).astype(int)
-    
     # Single person with no protection
     df['SingleNoProtection'] = (
         (df['Partner'] == "No") &
-        (df['Dependents'] == "No") &
-        (df['HasProtection'] == 0)
+        (df['Dependents'] == "No") 
     ).astype(int)
     
     return df
