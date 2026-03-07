@@ -1,18 +1,18 @@
-import pandas as pd 
-import numpy as np
+import gc
 
+import numpy as np
+import pandas as pd
+import ydf
 from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import StratifiedKFold
-
-from feature_engineering import (count_services, 
-                                 add_tenure_features, 
-                                 add_risk_indicator_features, 
-                                 add_numeric_features)
-
-import ydf
 from ydf import GradientBoostedTreesLearner
 
-import gc
+from feature_engineering import (
+    count_services,
+    add_tenure_features,
+    add_risk_indicator_features,
+    add_numeric_features
+)
 
 df = pd.read_csv("train.csv", index_col="id")
 df["SeniorCitizen"] = df["SeniorCitizen"].astype("category")
@@ -21,24 +21,27 @@ df["Churn"] = df["Churn"].map({"No": 0, "Yes": 1})
 test = pd.read_csv("test.csv", index_col="id")
 test["SeniorCitizen"] = test["SeniorCitizen"].astype("category")
 
+
 # Create a feature for total number of services
 service_cols = [
-    'PhoneService', 
-    'MultipleLines', 
-    'InternetService', 
-    'OnlineSecurity', 
-    'OnlineBackup', 
-    'DeviceProtection', 
-    'StreamingTV', 
+    'PhoneService',
+    'MultipleLines',
+    'InternetService',
+    'OnlineSecurity',
+    'OnlineBackup',
+    'DeviceProtection',
+    'StreamingTV',
     'StreamingMovies'
 ]
 
-df['TotalServices'] = df.apply(count_services, axis=1, args=(service_cols,))
+df['TotalServices'] = df.apply(count_services, axis=1,
+                               args=(service_cols,))
 df = add_tenure_features(df)
 df = add_risk_indicator_features(df)
 df = add_numeric_features(df)
 
-test['TotalServices'] = test.apply(count_services, axis=1, args=(service_cols,))
+test['TotalServices'] = test.apply(count_services, axis=1,
+                                   args=(service_cols,))
 test = add_tenure_features(test)
 test = add_risk_indicator_features(test)
 test = add_numeric_features(test)
@@ -50,25 +53,24 @@ ydf_params = dict(
     task=ydf.Task.CLASSIFICATION,
     label="Churn",
     num_threads=10,
-    num_trees=1000,
-    )
+    num_trees=1000
+)
 
 skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 auc_scores, test_preds = [], []
 
 for i, (train_idx, val_idx) in enumerate(skf.split(X, y)):
-    
     X_train, X_val = X.iloc[train_idx], X.iloc[val_idx]
     y_train, y_val = y.iloc[train_idx], y.iloc[val_idx]
-    
+
     train_df = X_train.copy()
     train_df["Churn"] = y_train
-    
+
     val_df = X_val.copy()
     val_df["Churn"] = y_val
-    
+
     model = GradientBoostedTreesLearner(**ydf_params).train(train_df)
-    
+
     y_pred = model.predict(val_df)
     auc = roc_auc_score(y_val, y_pred)
     auc_scores.append(auc)
