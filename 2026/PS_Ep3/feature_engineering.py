@@ -324,7 +324,118 @@ def add_risk_indicator_features(df):
 
 
 # =============================================================================
-# 7. Master Function
+# 7. Numeric Features
+# =============================================================================
+
+def add_numeric_features(df):
+    """
+    Add numeric features based on digits and patterns in tenure and charges.
+    
+    This function creates various engineered features from tenure,
+    MonthlyCharges, and TotalCharges including:
+    - First, last, and second digits
+    - Modulo operations
+    - Number of digits
+    - Multiple checks
+    - Rounding and deviation features
+    - Fractional components
+    - Derived per-digit metrics
+    
+    Parameters
+    ----------
+    df : pd.DataFrame
+        Input dataframe containing 'tenure', 'MonthlyCharges',
+        and 'TotalCharges' columns
+        
+    Returns
+    -------
+    pd.DataFrame
+        Dataframe with new numeric features added
+    """
+    df = df.copy()
+    
+    # Tenure digit features
+    t_str = df['tenure'].astype(str)
+    df['tenure_first_digit'] = t_str.str[0].astype(int)
+    df['tenure_last_digit'] = t_str.str[-1].astype(int)
+    df['tenure_second_digit'] = t_str.apply(
+        lambda x: int(x[1]) if len(x) > 1 else 0
+    )
+    
+    df['tenure_mod10'] = df['tenure'] % 10
+    df['tenure_mod12'] = df['tenure'] % 12
+    df['tenure_num_digits'] = t_str.str.len()
+    
+    df['tenure_is_multiple_10'] = (df['tenure'] % 10 == 0).astype('float32')
+    
+    df['tenure_rounded_10'] = np.round(df['tenure'] / 10) * 10
+    df['tenure_dev_from_round10'] = abs(
+        df['tenure'] - df['tenure_rounded_10']
+    )
+    
+    # MonthlyCharges digit features
+    mc_str = df['MonthlyCharges'].astype(str).str.replace('.', '')
+    
+    df['mc_first_digit'] = mc_str.str[0].astype(int)
+    df['mc_last_digit'] = mc_str.str[-1].astype(int)
+    df['mc_second_digit'] = mc_str.apply(
+        lambda x: int(x[1]) if len(x) > 1 else 0
+    )
+    
+    df['mc_mod10'] = np.floor(df['MonthlyCharges']) % 10
+    df['mc_mod100'] = np.floor(df['MonthlyCharges']) % 100
+    
+    mc_num_digits = np.floor(df['MonthlyCharges']).astype(int).astype(str)
+    df['mc_num_digits'] = mc_num_digits.str.len()
+    
+    mc_floor = np.floor(df['MonthlyCharges'])
+    df['mc_is_multiple_10'] = (mc_floor % 10 == 0).astype('float32')
+    df['mc_is_multiple_50'] = (mc_floor % 50 == 0).astype('float32')
+    
+    df['mc_rounded_10'] = np.round(df['MonthlyCharges'] / 10) * 10
+    df['mc_fractional'] = df['MonthlyCharges'] - mc_floor
+    df['mc_dev_from_round10'] = abs(
+        df['MonthlyCharges'] - df['mc_rounded_10']
+    )
+    
+    # TotalCharges digit features
+    tc_str = df['TotalCharges'].astype(str).str.replace('.', '')
+    
+    df['tc_first_digit'] = tc_str.str[0].astype(int)
+    df['tc_last_digit'] = tc_str.str[-1].astype(int)
+    df['tc_second_digit'] = tc_str.apply(
+        lambda x: int(x[1]) if len(x) > 1 else 0
+    )
+    
+    df['tc_mod10'] = np.floor(df['TotalCharges']) % 10
+    df['tc_mod100'] = np.floor(df['TotalCharges']) % 100
+    
+    tc_num_digits = np.floor(df['TotalCharges']).astype(int).astype(str)
+    df['tc_num_digits'] = tc_num_digits.str.len()
+    
+    tc_floor = np.floor(df['TotalCharges'])
+    df['tc_is_multiple_10'] = (tc_floor % 10 == 0).astype('float32')
+    df['tc_is_multiple_100'] = (tc_floor % 100 == 0).astype('float32')
+    
+    df['tc_rounded_100'] = np.round(df['TotalCharges'] / 100) * 100
+    df['tc_fractional'] = df['TotalCharges'] - tc_floor
+    
+    df['tc_dev_from_round100'] = abs(
+        df['TotalCharges'] - df['tc_rounded_100']
+    )
+    
+    # Derived features
+    df['tenure_years'] = df['tenure'] // 12
+    df['tenure_months_in_year'] = df['tenure'] % 12
+    
+    df['mc_per_digit'] = df['MonthlyCharges'] / (df['mc_num_digits'] + 0.001)
+    df['tc_per_digit'] = df['TotalCharges'] / (df['tc_num_digits'] + 0.001)
+    
+    return df
+
+
+# =============================================================================
+# 8. Master Function
 # =============================================================================
 
 def engineer_features(df, feature_groups='all'):
@@ -339,7 +450,7 @@ def engineer_features(df, feature_groups='all'):
         Which feature groups to apply. Options:
         - 'all': Apply all feature engineering
         - list: Specify groups ['service', 'interaction', 'financial',
-                'tenure', 'complexity', 'risk']
+                'tenure', 'complexity', 'risk', 'numeric']
         
     Returns
     -------
@@ -351,7 +462,7 @@ def engineer_features(df, feature_groups='all'):
     if feature_groups == 'all':
         feature_groups = [
             'service', 'interaction', 'financial',
-            'tenure', 'complexity', 'risk'
+            'tenure', 'complexity', 'risk', 'numeric'
         ]
     
     if 'service' in feature_groups:
@@ -372,4 +483,13 @@ def engineer_features(df, feature_groups='all'):
     if 'risk' in feature_groups:
         df = add_risk_indicator_features(df)
     
+    if 'numeric' in feature_groups:
+        df = add_numeric_features(df)
+    
     return df
+
+# # Use all features
+# df_all = engineer_features(df, feature_groups='all')
+
+# # Use specific feature groups
+# df_custom = engineer_features(df, feature_groups=['service', 'financial'])
