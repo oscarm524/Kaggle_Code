@@ -15,13 +15,6 @@ df["Churn"] = df["Churn"].map({"No": 0, "Yes": 1})
 test = pd.read_csv("test.csv", index_col="id")
 test["SeniorCitizen"] = test["SeniorCitizen"].astype("category")
 
-original = pd.read_csv(
-    "WA_Fn-UseC_-Telco-Customer-Churn.csv",
-    index_col="customerID"
-)
-original["SeniorCitizen"] = original["SeniorCitizen"].astype("category")
-original["Churn"] = original["Churn"].map({"No": 0, "Yes": 1})
-
 # Convert object columns with 3 or more unique labels to category dtype
 object_cols = df.select_dtypes(include="object").columns.to_list()
 # Exclude target variable if it exists in object columns
