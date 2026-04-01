@@ -138,3 +138,75 @@ submission = pd.read_csv(SUBMISSION_PATH)
 submission["Irrigation_Need"] = [label_map[c] for c in test_classes]
 submission.to_csv(OUTPUT_PATH, index=False)
 print(f"\nSubmission saved to {OUTPUT_PATH}")
+
+# Fold 1 / 5
+# [0]     validation-mlogloss:1.01685
+# [100]   validation-mlogloss:0.12703
+# [200]   validation-mlogloss:0.09812
+# [300]   validation-mlogloss:0.09024
+# [400]   validation-mlogloss:0.08674
+# [500]   validation-mlogloss:0.08475
+# [600]   validation-mlogloss:0.08346
+# [700]   validation-mlogloss:0.08252
+# [800]   validation-mlogloss:0.08178
+# [900]   validation-mlogloss:0.08138
+# [999]   validation-mlogloss:0.08121
+#   Fold 1 Balanced Accuracy: 0.971136
+
+# Fold 2 / 5
+# [0]     validation-mlogloss:1.01670
+# [100]   validation-mlogloss:0.12460
+# [200]   validation-mlogloss:0.09642
+# [300]   validation-mlogloss:0.08848
+# [400]   validation-mlogloss:0.08485
+# [500]   validation-mlogloss:0.08286
+# [600]   validation-mlogloss:0.08137
+# [700]   validation-mlogloss:0.08057
+# [800]   validation-mlogloss:0.08014
+# [900]   validation-mlogloss:0.07973
+# [995]   validation-mlogloss:0.07970
+#   Fold 2 Balanced Accuracy: 0.973418
+
+# Fold 3 / 5
+# [0]     validation-mlogloss:1.01687
+# [100]   validation-mlogloss:0.12629
+# [200]   validation-mlogloss:0.09735
+# [300]   validation-mlogloss:0.08965
+# [400]   validation-mlogloss:0.08567
+# [500]   validation-mlogloss:0.08349
+# [600]   validation-mlogloss:0.08197
+# [700]   validation-mlogloss:0.08101
+# [800]   validation-mlogloss:0.08024
+# [900]   validation-mlogloss:0.07974
+# [999]   validation-mlogloss:0.07937
+#   Fold 3 Balanced Accuracy: 0.973412
+
+# Fold 4 / 5
+# [0]     validation-mlogloss:1.01684
+# [100]   validation-mlogloss:0.12434
+# [200]   validation-mlogloss:0.09487
+# [300]   validation-mlogloss:0.08724
+# [400]   validation-mlogloss:0.08346
+# [500]   validation-mlogloss:0.08120
+# [600]   validation-mlogloss:0.07990
+# [700]   validation-mlogloss:0.07903
+# [800]   validation-mlogloss:0.07827
+# [900]   validation-mlogloss:0.07805
+# [999]   validation-mlogloss:0.07786
+#   Fold 4 Balanced Accuracy: 0.972494
+
+# Fold 5 / 5
+# [0]     validation-mlogloss:1.01710
+# [100]   validation-mlogloss:0.12510
+# [200]   validation-mlogloss:0.09507
+# [300]   validation-mlogloss:0.08729
+# [400]   validation-mlogloss:0.08340
+# [500]   validation-mlogloss:0.08138
+# [600]   validation-mlogloss:0.07998
+# [700]   validation-mlogloss:0.07915
+# [800]   validation-mlogloss:0.07861
+# [900]   validation-mlogloss:0.07804
+# [999]   validation-mlogloss:0.07767
+#   Fold 5 Balanced Accuracy: 0.972849
+
+# Overall OOF Balanced Accuracy: 0.972662
