@@ -1,3 +1,11 @@
+"""XGBoost model with best hyperparameters from first Optuna HPO.
+
+Trains a 5-fold stratified cross-validation XGBoost model using the
+best hyperparameter combination found during the first tuning run.
+Saves out-of-fold predicted probabilities (likelihoods) and a test
+submission to CSV.
+"""
+
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import StratifiedKFold
