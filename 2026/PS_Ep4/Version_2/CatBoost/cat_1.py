@@ -1,0 +1,181 @@
+"""CatBoost model (v1).
+
+Trains a 5-fold stratified cross-validation CatBoost model without the
+logistic-regression stacking feature used in v2.  Uses a higher iteration
+count (5000) with a larger border_count (2000) and extended
+early-stopping patience (300 rounds).
+Saves out-of-fold predicted probabilities (likelihoods) and a test
+submission to CSV.
+"""
+
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import StratifiedKFold
+from sklearn.metrics import balanced_accuracy_score
+from sklearn.utils.class_weight import compute_class_weight
+from catboost import CatBoostClassifier, Pool
+
+# -- Paths ---------------------------------------------------------
+BASE_DIR = "/media/oscarm524/Expansion/Kaggle/2026/PS_Ep4/Version_1"
+TRAIN_PATH = f"{BASE_DIR}/train.csv"
+TEST_PATH = f"{BASE_DIR}/test.csv"
+SUBMISSION_PATH = f"{BASE_DIR}/sample_submission.csv"
+SAVE_DIR = "/media/oscarm524/Expansion/Kaggle/2026/PS_Ep4/Version_2/CatBoost"
+OUTPUT_PATH = f"{SAVE_DIR}/cat_1.csv"
+OOF_PATH = f"{SAVE_DIR}/cat_1_oof.csv"
+TEST_PROBS_PATH = f"{SAVE_DIR}/cat_1_test.csv"
+
+# -- Feature Engineering -------------------------------------------
+def add_decimal_digits(df):
+    """Extract the first decimal digit per numeric column."""
+    cols = [
+        "Soil_Moisture",
+        "Temperature_C",
+        "Rainfall_mm",
+        "Wind_Speed_kmh",
+        "Humidity",
+        "Soil_pH",
+        "Organic_Carbon",
+        "Electrical_Conductivity",
+        "Sunlight_Hours",
+        "Field_Area_hectare",
+        "Previous_Irrigation_mm",
+    ]
+    for col in cols:
+        values = df[col].values
+        df[f"{col}_dec"] = (
+            np.floor((values - np.floor(values)) * 10).astype(int)
+        )
+    return df
+
+
+SOIL_THRESH = 25
+RAIN_THRESH = 300
+TEMP_THRESH = 30
+WIND_THRESH = 10
+
+
+def add_binary_flags(df):
+    """Domain-threshold binary features."""
+    df["soil_lt_25"]   = (df["Soil_Moisture"]     < SOIL_THRESH).astype(int)
+    df["rain_lt_300"]  = (df["Rainfall_mm"]        < RAIN_THRESH).astype(int)
+    df["temp_gt_30"]   = (df["Temperature_C"]      > TEMP_THRESH).astype(int)
+    df["wind_gt_10"]   = (df["Wind_Speed_kmh"]     > WIND_THRESH).astype(int)
+    df["is_harvest"]   = (df["Crop_Growth_Stage"] == "Harvest").astype(int)
+    df["is_sowing"]    = (df["Crop_Growth_Stage"] == "Sowing").astype(int)
+    df["mulching_yes"] = (df["Mulching_Used"]      == "Yes").astype(int)
+    return df
+
+# -- Load Data -----------------------------------------------------
+train = pd.read_csv(TRAIN_PATH, index_col="id")
+test = pd.read_csv(TEST_PATH, index_col="id")
+
+X = train.drop(columns=["Irrigation_Need"])
+y = train["Irrigation_Need"].map({"Low": 0, "Medium": 1, "High": 2})
+
+X_test = test.copy()
+
+# Apply feature engineering
+X = add_decimal_digits(X)
+X = add_binary_flags(X)
+X_test = add_decimal_digits(X_test)
+X_test = add_binary_flags(X_test)
+
+cat_cols = X.select_dtypes(include="object").columns.tolist()
+
+label_map = {0: "Low", 1: "Medium", 2: "High"}
+
+# -- Hyper-parameters -------------------
+param = {
+    "loss_function": "MultiClass",
+    "classes_count": 3,
+    "depth": 3,
+    "iterations": 5000,
+    "early_stopping_rounds": 300,
+    "random_seed": 42,
+    "verbose": 100,
+    "task_type": "GPU",
+}
+
+# -- 5-Fold CV Training & Test Prediction --------------------------
+skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+
+oof_preds = np.zeros(len(X))
+oof_probs = np.zeros((len(X), 3))
+test_preds = np.zeros((len(X_test), 3))
+fold_scores = []
+
+for fold, (train_index, valid_index) in enumerate(skf.split(X, y)):
+    print(f"Fold {fold + 1} / 5")
+
+    X_train, X_valid = X.iloc[train_index], X.iloc[valid_index]
+    y_train, y_valid = y.iloc[train_index], y.iloc[valid_index]
+
+    # Compute class weights from training fold
+    classes = np.sort(y_train.unique())
+    fold_class_weights = compute_class_weight(
+        class_weight="balanced", classes=classes, y=y_train,
+    )
+    fold_param = param.copy()
+    fold_param["class_weights"] = list(fold_class_weights)
+
+    train_pool = Pool(X_train, label=y_train, cat_features=cat_cols)
+    valid_pool = Pool(X_valid, label=y_valid, cat_features=cat_cols)
+    test_pool = Pool(X_test, cat_features=cat_cols)
+
+    model = CatBoostClassifier(**fold_param)
+    model.fit(train_pool, eval_set=valid_pool)
+
+    # OOF predictions
+    oof_preds[valid_index] = model.predict(valid_pool).flatten().astype(int)
+    fold_score = balanced_accuracy_score(
+        y_valid, oof_preds[valid_index],
+    )
+    fold_scores.append(fold_score)
+    print(f"  Fold {fold + 1} Balanced Accuracy: {fold_score:.6f}\n")
+
+    # OOF likelihoods
+    oof_probs[valid_index] = model.predict_proba(valid_pool)
+
+    # Test predictions (average probabilities across folds)
+    test_preds += model.predict_proba(test_pool) / 5
+
+print(f"Overall OOF Balanced Accuracy: {np.mean(fold_scores):.6f}")
+
+# -- Save OOF Predictions ------------------------------------------
+oof_df = pd.DataFrame({
+    "id": X.index,
+    "prob_Low": oof_probs[:, 0],
+    "prob_Medium": oof_probs[:, 1],
+    "prob_High": oof_probs[:, 2],
+})
+oof_df.to_csv(OOF_PATH, index=False)
+print(f"OOF predictions saved to {OOF_PATH}")
+
+# -- Save Test Predicted Likelihoods --------------------------------
+test_probs_df = pd.DataFrame({
+    "id": X_test.index,
+    "prob_Low": test_preds[:, 0],
+    "prob_Medium": test_preds[:, 1],
+    "prob_High": test_preds[:, 2],
+})
+test_probs_df.to_csv(TEST_PROBS_PATH, index=False)
+print(f"Test predicted likelihoods saved to {TEST_PROBS_PATH}")
+
+# -- Generate Submission --------------------------------------------
+test_classes = np.argmax(test_preds, axis=1)
+
+submission = pd.read_csv(SUBMISSION_PATH)
+submission["Irrigation_Need"] = [label_map[c] for c in test_classes]
+submission.to_csv(OUTPUT_PATH, index=False)
+print(f"\nSubmission saved to {OUTPUT_PATH}")
+
+# Result: Overall OOF Balanced Accuracy: 0.971181
+
+# -- CV Results --
+# Fold 1 Balanced Accuracy: 0.970338
+# Fold 2 Balanced Accuracy: 0.971690
+# Fold 3 Balanced Accuracy: 0.971583
+# Fold 4 Balanced Accuracy: 0.970664
+# Fold 5 Balanced Accuracy: 0.971230
+# Overall OOF Balanced Accuracy: 0.971101

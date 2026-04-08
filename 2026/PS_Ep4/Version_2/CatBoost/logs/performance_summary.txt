@@ -1,0 +1,124 @@
+==========================================================================================
+  CatBoost Experiments -- Performance Summary
+==========================================================================================
+
+Rank  Script          OOF BA        Std   Min Fold   Max Fold  Folds  Description
+------------------------------------------------------------------------------------------
+1     cat_8        0.972872   0.001016   0.971317   0.974507      5  KMeans clustering features
+2     cat_4        0.972791   0.001093   0.970952   0.974087      5  Log transforms + polynomial features
+3     cat_5        0.972704   0.001215   0.970534   0.974260      5  Frequency encoding of categoricals
+4     cat_7        0.972699   0.001353   0.970347   0.974456      5  Second decimal digit + quantile binning
+5     cat_3        0.972285   0.001143   0.970127   0.973541      5  Ratio features
+6     cat_2        0.972036   0.000980   0.970335   0.973380      5  Interaction features
+7     cat_11       0.971554   0.000665   0.970621   0.972398     10  10-fold CV + best features + tuned HP
+8     cat_1        0.971162   0.000987   0.969543   0.972645      5  Baseline (decimal digits + binary flags)
+9     cat_6        0.971072   0.001028   0.969518   0.972668      5  Deeper trees (depth=6) + lower LR
+10    cat_9        0.970963   0.001120   0.969039   0.972461      5  All combined features + LR stacking
+11    cat_10       0.969618   0.001152   0.967523   0.970756      5  Lossguide grow policy + all features
+------------------------------------------------------------------------------------------
+
+==========================================================================================
+  Per-Fold Breakdown
+==========================================================================================
+
+  cat_1.py -- Baseline (decimal digits + binary flags)
+    Fold  1: 0.969543
+    Fold  2: 0.971073
+    Fold  3: 0.972645
+    Fold  4: 0.971353
+    Fold  5: 0.971197
+     Overall: 0.971162
+
+  cat_2.py -- Interaction features
+    Fold  1: 0.970335
+    Fold  2: 0.971963
+    Fold  3: 0.973380
+    Fold  4: 0.972209
+    Fold  5: 0.972293
+     Overall: 0.972036
+
+  cat_3.py -- Ratio features
+    Fold  1: 0.970127
+    Fold  2: 0.972590
+    Fold  3: 0.973541
+    Fold  4: 0.972464
+    Fold  5: 0.972705
+     Overall: 0.972285
+
+  cat_4.py -- Log transforms + polynomial features
+    Fold  1: 0.970952
+    Fold  2: 0.973569
+    Fold  3: 0.974087
+    Fold  4: 0.973045
+    Fold  5: 0.972299
+     Overall: 0.972791
+
+  cat_5.py -- Frequency encoding of categoricals
+    Fold  1: 0.970534
+    Fold  2: 0.973200
+    Fold  3: 0.974260
+    Fold  4: 0.972796
+    Fold  5: 0.972729
+     Overall: 0.972704
+
+  cat_6.py -- Deeper trees (depth=6) + lower LR
+    Fold  1: 0.969518
+    Fold  2: 0.971390
+    Fold  3: 0.972668
+    Fold  4: 0.970617
+    Fold  5: 0.971167
+     Overall: 0.971072
+
+  cat_7.py -- Second decimal digit + quantile binning
+    Fold  1: 0.970347
+    Fold  2: 0.973003
+    Fold  3: 0.974456
+    Fold  4: 0.972402
+    Fold  5: 0.973288
+     Overall: 0.972699
+
+  cat_8.py -- KMeans clustering features
+    Fold  1: 0.971317
+    Fold  2: 0.972682
+    Fold  3: 0.974507
+    Fold  4: 0.973049
+    Fold  5: 0.972803
+     Overall: 0.972872
+
+  cat_9.py -- All combined features + LR stacking
+    Fold  1: 0.969039
+    Fold  2: 0.970705
+    Fold  3: 0.972461
+    Fold  4: 0.971198
+    Fold  5: 0.971412
+     Overall: 0.970963
+
+  cat_10.py -- Lossguide grow policy + all features
+    Fold  1: 0.967523
+    Fold  2: 0.970471
+    Fold  3: 0.970756
+    Fold  4: 0.969999
+    Fold  5: 0.969339
+     Overall: 0.969618
+
+  cat_11.py -- 10-fold CV + best features + tuned HP
+    Fold  1: 0.970680
+    Fold  2: 0.970621
+    Fold  3: 0.971090
+    Fold  4: 0.972357
+    Fold  5: 0.972288
+    Fold  6: 0.972398
+    Fold  7: 0.971039
+    Fold  8: 0.971975
+    Fold  9: 0.971204
+    Fold 10: 0.971890
+     Overall: 0.971554
+
+==========================================================================================
+
+  BEST: cat_8.py  (OOF Balanced Accuracy = 0.972872)
+        KMeans clustering features
+
+  Improvement over baseline (cat_1): +0.001710 (+0.1710%)
+
+==========================================================================================

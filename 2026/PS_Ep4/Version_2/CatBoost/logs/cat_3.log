@@ -1,0 +1,268 @@
+Fold 1 / 5
+Learning rate set to 0.097572
+0:	learn: 1.0086876	test: 1.0084515	best: 1.0084515 (0)	total: 8.82ms	remaining: 44.1s
+100:	learn: 0.1244098	test: 0.1260467	best: 0.1260467 (100)	total: 486ms	remaining: 23.6s
+200:	learn: 0.1025928	test: 0.1057052	best: 0.1057052 (200)	total: 930ms	remaining: 22.2s
+300:	learn: 0.0961462	test: 0.1005272	best: 0.1005272 (300)	total: 1.37s	remaining: 21.4s
+400:	learn: 0.0922252	test: 0.0977147	best: 0.0977147 (400)	total: 1.8s	remaining: 20.7s
+500:	learn: 0.0892251	test: 0.0959880	best: 0.0959880 (500)	total: 2.24s	remaining: 20.1s
+600:	learn: 0.0868702	test: 0.0945030	best: 0.0945030 (600)	total: 2.68s	remaining: 19.6s
+700:	learn: 0.0851392	test: 0.0934613	best: 0.0934613 (700)	total: 3.11s	remaining: 19.1s
+800:	learn: 0.0834405	test: 0.0926405	best: 0.0926322 (797)	total: 3.55s	remaining: 18.6s
+900:	learn: 0.0819289	test: 0.0919263	best: 0.0919218 (898)	total: 3.99s	remaining: 18.1s
+1000:	learn: 0.0805376	test: 0.0911443	best: 0.0911443 (1000)	total: 4.42s	remaining: 17.7s
+1100:	learn: 0.0792758	test: 0.0905238	best: 0.0905238 (1100)	total: 4.86s	remaining: 17.2s
+1200:	learn: 0.0781286	test: 0.0900449	best: 0.0900449 (1200)	total: 5.31s	remaining: 16.8s
+1300:	learn: 0.0770994	test: 0.0897848	best: 0.0897438 (1292)	total: 5.74s	remaining: 16.3s
+1400:	learn: 0.0761213	test: 0.0896008	best: 0.0895904 (1399)	total: 6.18s	remaining: 15.9s
+1500:	learn: 0.0752966	test: 0.0893986	best: 0.0893739 (1485)	total: 6.61s	remaining: 15.4s
+1600:	learn: 0.0742429	test: 0.0889957	best: 0.0889857 (1595)	total: 7.04s	remaining: 15s
+1700:	learn: 0.0732279	test: 0.0885734	best: 0.0885734 (1700)	total: 7.48s	remaining: 14.5s
+1800:	learn: 0.0724101	test: 0.0883483	best: 0.0883423 (1795)	total: 7.92s	remaining: 14.1s
+1900:	learn: 0.0714681	test: 0.0881237	best: 0.0881237 (1900)	total: 8.36s	remaining: 13.6s
+2000:	learn: 0.0706151	test: 0.0879135	best: 0.0879135 (2000)	total: 8.79s	remaining: 13.2s
+2100:	learn: 0.0699534	test: 0.0878987	best: 0.0878372 (2045)	total: 9.22s	remaining: 12.7s
+2200:	learn: 0.0693017	test: 0.0877013	best: 0.0877013 (2200)	total: 9.66s	remaining: 12.3s
+2300:	learn: 0.0685920	test: 0.0875809	best: 0.0875659 (2295)	total: 10.1s	remaining: 11.8s
+2400:	learn: 0.0678607	test: 0.0875337	best: 0.0875335 (2399)	total: 10.5s	remaining: 11.4s
+2500:	learn: 0.0672594	test: 0.0875174	best: 0.0874446 (2433)	total: 11s	remaining: 11s
+2600:	learn: 0.0666276	test: 0.0873628	best: 0.0873522 (2595)	total: 11.4s	remaining: 10.5s
+2700:	learn: 0.0660482	test: 0.0872641	best: 0.0872441 (2651)	total: 11.8s	remaining: 10.1s
+2800:	learn: 0.0654688	test: 0.0871749	best: 0.0871648 (2796)	total: 12.3s	remaining: 9.64s
+2900:	learn: 0.0649275	test: 0.0870671	best: 0.0870671 (2900)	total: 12.7s	remaining: 9.2s
+3000:	learn: 0.0643407	test: 0.0870086	best: 0.0870013 (2991)	total: 13.2s	remaining: 8.77s
+3100:	learn: 0.0638155	test: 0.0870314	best: 0.0870013 (2991)	total: 13.6s	remaining: 8.33s
+3200:	learn: 0.0633025	test: 0.0868757	best: 0.0868757 (3200)	total: 14s	remaining: 7.89s
+3300:	learn: 0.0627792	test: 0.0869233	best: 0.0868757 (3200)	total: 14.5s	remaining: 7.45s
+3400:	learn: 0.0622959	test: 0.0868008	best: 0.0867848 (3382)	total: 14.9s	remaining: 7.01s
+3500:	learn: 0.0618315	test: 0.0867993	best: 0.0867837 (3493)	total: 15.3s	remaining: 6.57s
+3600:	learn: 0.0613802	test: 0.0868150	best: 0.0867764 (3545)	total: 15.8s	remaining: 6.13s
+3700:	learn: 0.0609574	test: 0.0868097	best: 0.0867764 (3545)	total: 16.2s	remaining: 5.69s
+3800:	learn: 0.0605646	test: 0.0867671	best: 0.0867666 (3798)	total: 16.7s	remaining: 5.25s
+3900:	learn: 0.0601322	test: 0.0867328	best: 0.0867190 (3877)	total: 17.1s	remaining: 4.82s
+4000:	learn: 0.0597538	test: 0.0867217	best: 0.0867054 (3995)	total: 17.5s	remaining: 4.38s
+4100:	learn: 0.0593426	test: 0.0866931	best: 0.0866786 (4090)	total: 18s	remaining: 3.94s
+4200:	learn: 0.0588835	test: 0.0866736	best: 0.0866678 (4197)	total: 18.4s	remaining: 3.5s
+4300:	learn: 0.0585012	test: 0.0866128	best: 0.0866030 (4285)	total: 18.8s	remaining: 3.06s
+4400:	learn: 0.0581418	test: 0.0867240	best: 0.0866030 (4285)	total: 19.3s	remaining: 2.62s
+4500:	learn: 0.0577267	test: 0.0866597	best: 0.0866030 (4285)	total: 19.7s	remaining: 2.19s
+bestTest = 0.08660297012
+bestIteration = 4285
+Shrink model to first 4286 iterations.
+  Fold 1 Balanced Accuracy: 0.970127
+
+Fold 2 / 5
+Learning rate set to 0.097572
+0:	learn: 1.0088090	test: 1.0082832	best: 1.0082832 (0)	total: 5.34ms	remaining: 26.7s
+100:	learn: 0.1240004	test: 0.1245824	best: 0.1245824 (100)	total: 484ms	remaining: 23.5s
+200:	learn: 0.1039601	test: 0.1053753	best: 0.1053753 (200)	total: 935ms	remaining: 22.3s
+300:	learn: 0.0968639	test: 0.0989948	best: 0.0989948 (300)	total: 1.39s	remaining: 21.7s
+400:	learn: 0.0929889	test: 0.0961312	best: 0.0961312 (400)	total: 1.83s	remaining: 21s
+500:	learn: 0.0903495	test: 0.0943773	best: 0.0943707 (499)	total: 2.28s	remaining: 20.4s
+600:	learn: 0.0881469	test: 0.0929066	best: 0.0929033 (598)	total: 2.72s	remaining: 19.9s
+700:	learn: 0.0861672	test: 0.0917273	best: 0.0917273 (700)	total: 3.17s	remaining: 19.4s
+800:	learn: 0.0842631	test: 0.0905863	best: 0.0905831 (799)	total: 3.61s	remaining: 18.9s
+900:	learn: 0.0826093	test: 0.0896255	best: 0.0896255 (900)	total: 4.05s	remaining: 18.4s
+1000:	learn: 0.0812300	test: 0.0888288	best: 0.0888288 (1000)	total: 4.49s	remaining: 18s
+1100:	learn: 0.0798440	test: 0.0881658	best: 0.0881658 (1100)	total: 4.93s	remaining: 17.5s
+1200:	learn: 0.0785380	test: 0.0875099	best: 0.0875055 (1199)	total: 5.37s	remaining: 17s
+1300:	learn: 0.0773576	test: 0.0870709	best: 0.0870557 (1295)	total: 5.8s	remaining: 16.5s
+1400:	learn: 0.0762978	test: 0.0868218	best: 0.0868124 (1398)	total: 6.23s	remaining: 16s
+1500:	learn: 0.0752444	test: 0.0864616	best: 0.0864616 (1500)	total: 6.67s	remaining: 15.5s
+1600:	learn: 0.0743297	test: 0.0861521	best: 0.0861495 (1593)	total: 7.09s	remaining: 15.1s
+1700:	learn: 0.0734492	test: 0.0858757	best: 0.0858739 (1698)	total: 7.53s	remaining: 14.6s
+1800:	learn: 0.0726373	test: 0.0856742	best: 0.0856742 (1800)	total: 7.97s	remaining: 14.2s
+1900:	learn: 0.0719870	test: 0.0855740	best: 0.0855663 (1896)	total: 8.4s	remaining: 13.7s
+2000:	learn: 0.0712215	test: 0.0853206	best: 0.0853049 (1997)	total: 8.84s	remaining: 13.2s
+2100:	learn: 0.0704885	test: 0.0851613	best: 0.0851570 (2099)	total: 9.27s	remaining: 12.8s
+2200:	learn: 0.0698027	test: 0.0850197	best: 0.0849790 (2185)	total: 9.71s	remaining: 12.3s
+2300:	learn: 0.0690605	test: 0.0847836	best: 0.0847798 (2296)	total: 10.1s	remaining: 11.9s
+2400:	learn: 0.0684488	test: 0.0846402	best: 0.0846236 (2379)	total: 10.6s	remaining: 11.5s
+2500:	learn: 0.0677535	test: 0.0844067	best: 0.0844019 (2490)	total: 11s	remaining: 11s
+2600:	learn: 0.0671385	test: 0.0842244	best: 0.0841930 (2579)	total: 11.4s	remaining: 10.6s
+2700:	learn: 0.0665328	test: 0.0841153	best: 0.0841153 (2700)	total: 11.9s	remaining: 10.1s
+2800:	learn: 0.0660087	test: 0.0840105	best: 0.0840024 (2785)	total: 12.3s	remaining: 9.67s
+2900:	learn: 0.0654027	test: 0.0839307	best: 0.0839129 (2896)	total: 12.8s	remaining: 9.24s
+3000:	learn: 0.0647714	test: 0.0837374	best: 0.0837291 (2995)	total: 13.2s	remaining: 8.8s
+3100:	learn: 0.0642864	test: 0.0836942	best: 0.0836911 (3072)	total: 13.6s	remaining: 8.35s
+3200:	learn: 0.0637378	test: 0.0835957	best: 0.0835899 (3199)	total: 14.1s	remaining: 7.91s
+3300:	learn: 0.0632174	test: 0.0835130	best: 0.0834897 (3291)	total: 14.5s	remaining: 7.47s
+3400:	learn: 0.0627536	test: 0.0834804	best: 0.0834619 (3388)	total: 15s	remaining: 7.03s
+3500:	learn: 0.0622480	test: 0.0833923	best: 0.0833745 (3482)	total: 15.4s	remaining: 6.59s
+3600:	learn: 0.0616871	test: 0.0832407	best: 0.0832158 (3594)	total: 15.8s	remaining: 6.15s
+3700:	learn: 0.0611861	test: 0.0831617	best: 0.0831559 (3661)	total: 16.3s	remaining: 5.71s
+3800:	learn: 0.0607205	test: 0.0830870	best: 0.0830870 (3800)	total: 16.7s	remaining: 5.27s
+3900:	learn: 0.0603334	test: 0.0830788	best: 0.0830715 (3882)	total: 17.1s	remaining: 4.83s
+4000:	learn: 0.0599333	test: 0.0831285	best: 0.0830533 (3925)	total: 17.6s	remaining: 4.39s
+4100:	learn: 0.0595154	test: 0.0831395	best: 0.0830533 (3925)	total: 18s	remaining: 3.95s
+4200:	learn: 0.0591078	test: 0.0831411	best: 0.0830533 (3925)	total: 18.5s	remaining: 3.51s
+bestTest = 0.08305326079
+bestIteration = 3925
+Shrink model to first 3926 iterations.
+  Fold 2 Balanced Accuracy: 0.972590
+
+Fold 3 / 5
+Learning rate set to 0.097572
+0:	learn: 1.0084809	test: 1.0090490	best: 1.0090490 (0)	total: 5.31ms	remaining: 26.5s
+100:	learn: 0.1252982	test: 0.1252352	best: 0.1252352 (100)	total: 490ms	remaining: 23.8s
+200:	learn: 0.1031733	test: 0.1041285	best: 0.1041285 (200)	total: 948ms	remaining: 22.6s
+300:	learn: 0.0968885	test: 0.0986475	best: 0.0986475 (300)	total: 1.4s	remaining: 21.9s
+400:	learn: 0.0932305	test: 0.0957490	best: 0.0957490 (400)	total: 1.84s	remaining: 21.2s
+500:	learn: 0.0904302	test: 0.0939397	best: 0.0939397 (500)	total: 2.29s	remaining: 20.6s
+600:	learn: 0.0880201	test: 0.0923896	best: 0.0923895 (599)	total: 2.75s	remaining: 20.1s
+700:	learn: 0.0858186	test: 0.0908670	best: 0.0908670 (700)	total: 3.17s	remaining: 19.5s
+800:	learn: 0.0840931	test: 0.0898114	best: 0.0898049 (799)	total: 3.61s	remaining: 18.9s
+900:	learn: 0.0826179	test: 0.0891990	best: 0.0891990 (900)	total: 4.05s	remaining: 18.4s
+1000:	learn: 0.0813213	test: 0.0884338	best: 0.0884338 (1000)	total: 4.5s	remaining: 18s
+1100:	learn: 0.0802029	test: 0.0879525	best: 0.0879525 (1100)	total: 4.94s	remaining: 17.5s
+1200:	learn: 0.0790826	test: 0.0874121	best: 0.0874121 (1200)	total: 5.37s	remaining: 17s
+1300:	learn: 0.0781253	test: 0.0870043	best: 0.0870010 (1299)	total: 5.81s	remaining: 16.5s
+1400:	learn: 0.0771471	test: 0.0865599	best: 0.0865551 (1397)	total: 6.24s	remaining: 16s
+1500:	learn: 0.0761113	test: 0.0860540	best: 0.0860540 (1500)	total: 6.67s	remaining: 15.6s
+1600:	learn: 0.0752695	test: 0.0857123	best: 0.0857123 (1600)	total: 7.12s	remaining: 15.1s
+1700:	learn: 0.0743740	test: 0.0853254	best: 0.0853182 (1699)	total: 7.55s	remaining: 14.6s
+1800:	learn: 0.0735410	test: 0.0850308	best: 0.0850308 (1800)	total: 7.98s	remaining: 14.2s
+1900:	learn: 0.0727536	test: 0.0847670	best: 0.0847562 (1893)	total: 8.42s	remaining: 13.7s
+2000:	learn: 0.0719821	test: 0.0844915	best: 0.0844875 (1995)	total: 8.86s	remaining: 13.3s
+2100:	learn: 0.0712977	test: 0.0842520	best: 0.0842520 (2100)	total: 9.3s	remaining: 12.8s
+2200:	learn: 0.0705739	test: 0.0840855	best: 0.0840759 (2192)	total: 9.74s	remaining: 12.4s
+2300:	learn: 0.0699193	test: 0.0839237	best: 0.0839203 (2293)	total: 10.2s	remaining: 11.9s
+2400:	learn: 0.0691676	test: 0.0837434	best: 0.0837333 (2392)	total: 10.6s	remaining: 11.5s
+2500:	learn: 0.0685885	test: 0.0835605	best: 0.0835495 (2481)	total: 11s	remaining: 11s
+2600:	learn: 0.0679574	test: 0.0835022	best: 0.0834847 (2574)	total: 11.5s	remaining: 10.6s
+2700:	learn: 0.0673965	test: 0.0834647	best: 0.0834457 (2687)	total: 11.9s	remaining: 10.1s
+2800:	learn: 0.0668071	test: 0.0833122	best: 0.0833122 (2800)	total: 12.4s	remaining: 9.7s
+2900:	learn: 0.0661516	test: 0.0830793	best: 0.0830793 (2900)	total: 12.8s	remaining: 9.26s
+3000:	learn: 0.0656238	test: 0.0829656	best: 0.0829528 (2991)	total: 13.2s	remaining: 8.81s
+3100:	learn: 0.0651040	test: 0.0828617	best: 0.0828617 (3100)	total: 13.7s	remaining: 8.37s
+3200:	learn: 0.0645566	test: 0.0827912	best: 0.0827823 (3195)	total: 14.1s	remaining: 7.93s
+3300:	learn: 0.0640808	test: 0.0827505	best: 0.0827222 (3256)	total: 14.6s	remaining: 7.49s
+3400:	learn: 0.0635831	test: 0.0826765	best: 0.0826765 (3400)	total: 15s	remaining: 7.04s
+3500:	learn: 0.0630971	test: 0.0825346	best: 0.0825306 (3495)	total: 15.4s	remaining: 6.6s
+3600:	learn: 0.0625972	test: 0.0823945	best: 0.0823912 (3598)	total: 15.9s	remaining: 6.16s
+3700:	learn: 0.0620392	test: 0.0822608	best: 0.0822463 (3688)	total: 16.3s	remaining: 5.72s
+3800:	learn: 0.0616232	test: 0.0821232	best: 0.0821197 (3799)	total: 16.7s	remaining: 5.28s
+3900:	learn: 0.0612132	test: 0.0821204	best: 0.0820854 (3881)	total: 17.2s	remaining: 4.84s
+4000:	learn: 0.0607496	test: 0.0821051	best: 0.0820739 (3969)	total: 17.6s	remaining: 4.4s
+4100:	learn: 0.0603435	test: 0.0821077	best: 0.0820577 (4051)	total: 18.1s	remaining: 3.96s
+4200:	learn: 0.0599174	test: 0.0820483	best: 0.0820483 (4200)	total: 18.5s	remaining: 3.52s
+4300:	learn: 0.0594928	test: 0.0819520	best: 0.0819520 (4300)	total: 18.9s	remaining: 3.08s
+4400:	learn: 0.0591425	test: 0.0819744	best: 0.0819457 (4302)	total: 19.4s	remaining: 2.64s
+4500:	learn: 0.0587845	test: 0.0820059	best: 0.0819457 (4302)	total: 19.8s	remaining: 2.19s
+4600:	learn: 0.0583847	test: 0.0818938	best: 0.0818808 (4585)	total: 20.2s	remaining: 1.75s
+4700:	learn: 0.0580160	test: 0.0818744	best: 0.0818690 (4636)	total: 20.7s	remaining: 1.31s
+4800:	learn: 0.0576748	test: 0.0818077	best: 0.0818077 (4800)	total: 21.1s	remaining: 875ms
+4900:	learn: 0.0573006	test: 0.0816974	best: 0.0816664 (4884)	total: 21.6s	remaining: 435ms
+4999:	learn: 0.0569338	test: 0.0816179	best: 0.0816043 (4986)	total: 22s	remaining: 0us
+bestTest = 0.08160428537
+bestIteration = 4986
+Shrink model to first 4987 iterations.
+  Fold 3 Balanced Accuracy: 0.973541
+
+Fold 4 / 5
+Learning rate set to 0.097572
+0:	learn: 1.0087067	test: 1.0085523	best: 1.0085523 (0)	total: 5.99ms	remaining: 30s
+100:	learn: 0.1235344	test: 0.1231812	best: 0.1231812 (100)	total: 491ms	remaining: 23.8s
+200:	learn: 0.1036245	test: 0.1039683	best: 0.1039683 (200)	total: 945ms	remaining: 22.6s
+300:	learn: 0.0970535	test: 0.0980453	best: 0.0980453 (300)	total: 1.4s	remaining: 21.8s
+400:	learn: 0.0935597	test: 0.0955309	best: 0.0955297 (398)	total: 1.84s	remaining: 21.1s
+500:	learn: 0.0908666	test: 0.0937343	best: 0.0937343 (500)	total: 2.28s	remaining: 20.5s
+600:	learn: 0.0884887	test: 0.0921426	best: 0.0921421 (599)	total: 2.73s	remaining: 20s
+700:	learn: 0.0865939	test: 0.0909613	best: 0.0909613 (700)	total: 3.17s	remaining: 19.4s
+800:	learn: 0.0846402	test: 0.0895973	best: 0.0895973 (800)	total: 3.61s	remaining: 18.9s
+900:	learn: 0.0829838	test: 0.0884928	best: 0.0884848 (899)	total: 4.04s	remaining: 18.4s
+1000:	learn: 0.0816445	test: 0.0878008	best: 0.0877977 (996)	total: 4.48s	remaining: 17.9s
+1100:	learn: 0.0803243	test: 0.0870212	best: 0.0870212 (1100)	total: 4.92s	remaining: 17.4s
+1200:	learn: 0.0791572	test: 0.0865912	best: 0.0865876 (1199)	total: 5.35s	remaining: 16.9s
+1300:	learn: 0.0780118	test: 0.0859518	best: 0.0859518 (1300)	total: 5.78s	remaining: 16.4s
+1400:	learn: 0.0769338	test: 0.0854909	best: 0.0854906 (1399)	total: 6.21s	remaining: 16s
+1500:	learn: 0.0759221	test: 0.0850393	best: 0.0850357 (1499)	total: 6.65s	remaining: 15.5s
+1600:	learn: 0.0748517	test: 0.0845953	best: 0.0845867 (1597)	total: 7.09s	remaining: 15s
+1700:	learn: 0.0739948	test: 0.0842287	best: 0.0842235 (1686)	total: 7.52s	remaining: 14.6s
+1800:	learn: 0.0732582	test: 0.0840412	best: 0.0840322 (1799)	total: 7.95s	remaining: 14.1s
+1900:	learn: 0.0724010	test: 0.0836695	best: 0.0836695 (1900)	total: 8.38s	remaining: 13.7s
+2000:	learn: 0.0717492	test: 0.0834841	best: 0.0834841 (2000)	total: 8.82s	remaining: 13.2s
+2100:	learn: 0.0709809	test: 0.0831909	best: 0.0831889 (2092)	total: 9.25s	remaining: 12.8s
+2200:	learn: 0.0703161	test: 0.0830001	best: 0.0830001 (2200)	total: 9.68s	remaining: 12.3s
+2300:	learn: 0.0697270	test: 0.0829307	best: 0.0829307 (2300)	total: 10.1s	remaining: 11.9s
+2400:	learn: 0.0690595	test: 0.0827396	best: 0.0827396 (2400)	total: 10.6s	remaining: 11.4s
+2500:	learn: 0.0683771	test: 0.0825056	best: 0.0825056 (2500)	total: 11s	remaining: 11s
+2600:	learn: 0.0678002	test: 0.0823468	best: 0.0823462 (2592)	total: 11.4s	remaining: 10.5s
+2700:	learn: 0.0672200	test: 0.0822513	best: 0.0822397 (2695)	total: 11.9s	remaining: 10.1s
+2800:	learn: 0.0666962	test: 0.0820933	best: 0.0820933 (2800)	total: 12.3s	remaining: 9.65s
+2900:	learn: 0.0661052	test: 0.0819039	best: 0.0819020 (2899)	total: 12.7s	remaining: 9.21s
+3000:	learn: 0.0655524	test: 0.0818005	best: 0.0817990 (2999)	total: 13.2s	remaining: 8.77s
+3100:	learn: 0.0649926	test: 0.0817650	best: 0.0817618 (3099)	total: 13.6s	remaining: 8.33s
+3200:	learn: 0.0644559	test: 0.0816787	best: 0.0816603 (3196)	total: 14s	remaining: 7.89s
+3300:	learn: 0.0639481	test: 0.0816033	best: 0.0815726 (3281)	total: 14.5s	remaining: 7.45s
+3400:	learn: 0.0634123	test: 0.0815417	best: 0.0815044 (3378)	total: 14.9s	remaining: 7.01s
+3500:	learn: 0.0629273	test: 0.0814555	best: 0.0814383 (3490)	total: 15.3s	remaining: 6.57s
+3600:	learn: 0.0625275	test: 0.0814318	best: 0.0814300 (3598)	total: 15.8s	remaining: 6.13s
+3700:	learn: 0.0620920	test: 0.0813159	best: 0.0813035 (3696)	total: 16.2s	remaining: 5.69s
+3800:	learn: 0.0615782	test: 0.0811963	best: 0.0811928 (3797)	total: 16.6s	remaining: 5.25s
+3900:	learn: 0.0611228	test: 0.0811711	best: 0.0811405 (3878)	total: 17.1s	remaining: 4.81s
+4000:	learn: 0.0606955	test: 0.0811240	best: 0.0811021 (3987)	total: 17.5s	remaining: 4.37s
+4100:	learn: 0.0602892	test: 0.0810545	best: 0.0810494 (4055)	total: 17.9s	remaining: 3.93s
+4200:	learn: 0.0599025	test: 0.0810580	best: 0.0810363 (4149)	total: 18.4s	remaining: 3.5s
+4300:	learn: 0.0594418	test: 0.0809556	best: 0.0809556 (4300)	total: 18.8s	remaining: 3.06s
+4400:	learn: 0.0590864	test: 0.0809174	best: 0.0809174 (4400)	total: 19.3s	remaining: 2.62s
+4500:	learn: 0.0587260	test: 0.0809888	best: 0.0808955 (4419)	total: 19.7s	remaining: 2.18s
+4600:	learn: 0.0583771	test: 0.0808880	best: 0.0808854 (4599)	total: 20.1s	remaining: 1.74s
+4700:	learn: 0.0580077	test: 0.0807976	best: 0.0807829 (4638)	total: 20.5s	remaining: 1.31s
+4800:	learn: 0.0576074	test: 0.0807400	best: 0.0807317 (4764)	total: 21s	remaining: 870ms
+4900:	learn: 0.0572683	test: 0.0807970	best: 0.0807209 (4808)	total: 21.4s	remaining: 433ms
+4999:	learn: 0.0569351	test: 0.0807905	best: 0.0807209 (4808)	total: 21.9s	remaining: 0us
+bestTest = 0.08072090593
+bestIteration = 4808
+Shrink model to first 4809 iterations.
+  Fold 4 Balanced Accuracy: 0.972464
+
+Fold 5 / 5
+Learning rate set to 0.097572
+0:	learn: 1.0085775	test: 1.0089487	best: 1.0089487 (0)	total: 5.79ms	remaining: 29s
+100:	learn: 0.1245050	test: 0.1243276	best: 0.1243276 (100)	total: 493ms	remaining: 23.9s
+200:	learn: 0.1045754	test: 0.1049811	best: 0.1049811 (200)	total: 950ms	remaining: 22.7s
+300:	learn: 0.0978889	test: 0.0992158	best: 0.0992158 (300)	total: 1.4s	remaining: 21.8s
+400:	learn: 0.0939213	test: 0.0959395	best: 0.0959386 (399)	total: 1.85s	remaining: 21.2s
+500:	learn: 0.0910958	test: 0.0939384	best: 0.0939384 (500)	total: 2.29s	remaining: 20.6s
+600:	learn: 0.0884759	test: 0.0920120	best: 0.0920120 (600)	total: 2.74s	remaining: 20s
+700:	learn: 0.0861938	test: 0.0905612	best: 0.0905612 (700)	total: 3.18s	remaining: 19.5s
+800:	learn: 0.0844104	test: 0.0894514	best: 0.0894514 (800)	total: 3.63s	remaining: 19s
+900:	learn: 0.0825637	test: 0.0883325	best: 0.0883325 (900)	total: 4.06s	remaining: 18.5s
+1000:	learn: 0.0811741	test: 0.0877077	best: 0.0876971 (993)	total: 4.5s	remaining: 18s
+1100:	learn: 0.0799001	test: 0.0871044	best: 0.0871038 (1099)	total: 4.93s	remaining: 17.5s
+1200:	learn: 0.0787185	test: 0.0865081	best: 0.0865081 (1200)	total: 5.37s	remaining: 17s
+1300:	learn: 0.0775431	test: 0.0860656	best: 0.0860656 (1300)	total: 5.8s	remaining: 16.5s
+1400:	learn: 0.0765469	test: 0.0857629	best: 0.0857546 (1396)	total: 6.23s	remaining: 16s
+1500:	learn: 0.0755010	test: 0.0853040	best: 0.0853009 (1499)	total: 6.66s	remaining: 15.5s
+1600:	learn: 0.0746419	test: 0.0851141	best: 0.0851141 (1600)	total: 7.08s	remaining: 15s
+1700:	learn: 0.0737471	test: 0.0848547	best: 0.0848547 (1700)	total: 7.53s	remaining: 14.6s
+1800:	learn: 0.0728924	test: 0.0845878	best: 0.0845878 (1800)	total: 7.96s	remaining: 14.1s
+1900:	learn: 0.0720915	test: 0.0843073	best: 0.0843073 (1900)	total: 8.39s	remaining: 13.7s
+2000:	learn: 0.0713098	test: 0.0841023	best: 0.0840852 (1994)	total: 8.84s	remaining: 13.2s
+2100:	learn: 0.0706409	test: 0.0839334	best: 0.0839299 (2096)	total: 9.27s	remaining: 12.8s
+2200:	learn: 0.0698212	test: 0.0836512	best: 0.0836496 (2192)	total: 9.71s	remaining: 12.3s
+2300:	learn: 0.0691895	test: 0.0835185	best: 0.0834972 (2282)	total: 10.1s	remaining: 11.9s
+2400:	learn: 0.0685255	test: 0.0833496	best: 0.0833436 (2392)	total: 10.6s	remaining: 11.4s
+2500:	learn: 0.0678423	test: 0.0831560	best: 0.0831328 (2496)	total: 11s	remaining: 11s
+2600:	learn: 0.0672475	test: 0.0829473	best: 0.0829436 (2598)	total: 11.4s	remaining: 10.5s
+2700:	learn: 0.0666042	test: 0.0827749	best: 0.0827646 (2692)	total: 11.9s	remaining: 10.1s
+2800:	learn: 0.0660169	test: 0.0826672	best: 0.0826439 (2773)	total: 12.3s	remaining: 9.66s
+2900:	learn: 0.0654628	test: 0.0826124	best: 0.0825955 (2885)	total: 12.7s	remaining: 9.22s
+3000:	learn: 0.0649589	test: 0.0825666	best: 0.0825497 (2973)	total: 13.2s	remaining: 8.78s
+3100:	learn: 0.0643863	test: 0.0825184	best: 0.0825145 (3099)	total: 13.6s	remaining: 8.33s
+3200:	learn: 0.0638803	test: 0.0824219	best: 0.0824171 (3191)	total: 14s	remaining: 7.89s
+3300:	learn: 0.0633387	test: 0.0823843	best: 0.0823753 (3289)	total: 14.5s	remaining: 7.45s
+3400:	learn: 0.0627861	test: 0.0823143	best: 0.0823011 (3343)	total: 14.9s	remaining: 7.01s
+3500:	learn: 0.0623645	test: 0.0823401	best: 0.0823011 (3343)	total: 15.3s	remaining: 6.57s
+3600:	learn: 0.0619053	test: 0.0823428	best: 0.0823011 (3343)	total: 15.8s	remaining: 6.13s
+bestTest = 0.08230105983
+bestIteration = 3343
+Shrink model to first 3344 iterations.
+  Fold 5 Balanced Accuracy: 0.972705
+
+Overall OOF Balanced Accuracy: 0.972285
+OOF predictions saved to /media/oscarm524/Expansion/Kaggle/2026/PS_Ep4/Version_2/CatBoost/cat_3_oof.csv
+Test predicted likelihoods saved to /media/oscarm524/Expansion/Kaggle/2026/PS_Ep4/Version_2/CatBoost/cat_3_test.csv
+
+Submission saved to /media/oscarm524/Expansion/Kaggle/2026/PS_Ep4/Version_2/CatBoost/cat_3.csv

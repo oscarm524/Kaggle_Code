@@ -1,0 +1,103 @@
+Fold 1 / 5
+0:	learn: 1.0200829	test: 1.0200136	best: 1.0200136 (0)	total: 10.8ms	remaining: 1m 26s
+200:	learn: 0.0924259	test: 0.0977744	best: 0.0977744 (200)	total: 1.33s	remaining: 51.5s
+400:	learn: 0.0833217	test: 0.0925567	best: 0.0925567 (400)	total: 2.57s	remaining: 48.7s
+600:	learn: 0.0775334	test: 0.0904872	best: 0.0904799 (599)	total: 3.8s	remaining: 46.8s
+800:	learn: 0.0731868	test: 0.0894893	best: 0.0894885 (799)	total: 5.03s	remaining: 45.2s
+1000:	learn: 0.0693831	test: 0.0884962	best: 0.0884962 (1000)	total: 6.26s	remaining: 43.8s
+1200:	learn: 0.0661818	test: 0.0878225	best: 0.0878225 (1200)	total: 7.48s	remaining: 42.3s
+1400:	learn: 0.0634240	test: 0.0875470	best: 0.0875264 (1374)	total: 8.71s	remaining: 41s
+1600:	learn: 0.0610543	test: 0.0874135	best: 0.0873825 (1591)	total: 9.93s	remaining: 39.7s
+1800:	learn: 0.0588751	test: 0.0873779	best: 0.0873590 (1736)	total: 11.1s	remaining: 38.4s
+2000:	learn: 0.0568674	test: 0.0874444	best: 0.0873590 (1736)	total: 12.4s	remaining: 37.1s
+2200:	learn: 0.0550725	test: 0.0875958	best: 0.0873590 (1736)	total: 13.6s	remaining: 35.9s
+bestTest = 0.08735897082
+bestIteration = 1736
+Shrink model to first 1737 iterations.
+  Fold 1 Balanced Accuracy: 0.969518
+
+Fold 2 / 5
+0:	learn: 1.0200807	test: 1.0199221	best: 1.0199221 (0)	total: 7.3ms	remaining: 58.4s
+200:	learn: 0.0936172	test: 0.0963439	best: 0.0963439 (200)	total: 1.31s	remaining: 50.9s
+400:	learn: 0.0844271	test: 0.0909253	best: 0.0909253 (400)	total: 2.55s	remaining: 48.4s
+600:	learn: 0.0788220	test: 0.0886616	best: 0.0886578 (595)	total: 3.78s	remaining: 46.5s
+800:	learn: 0.0743713	test: 0.0874403	best: 0.0874343 (798)	total: 5s	remaining: 45s
+1000:	learn: 0.0705109	test: 0.0863105	best: 0.0863041 (995)	total: 6.24s	remaining: 43.6s
+1200:	learn: 0.0670860	test: 0.0855169	best: 0.0855117 (1199)	total: 7.46s	remaining: 42.2s
+1400:	learn: 0.0642267	test: 0.0850883	best: 0.0850814 (1398)	total: 8.7s	remaining: 41s
+1600:	learn: 0.0617841	test: 0.0847339	best: 0.0847339 (1600)	total: 9.93s	remaining: 39.7s
+1800:	learn: 0.0595787	test: 0.0846113	best: 0.0845941 (1797)	total: 11.2s	remaining: 38.4s
+2000:	learn: 0.0576080	test: 0.0846962	best: 0.0845941 (1797)	total: 12.4s	remaining: 37.1s
+2200:	learn: 0.0557607	test: 0.0846245	best: 0.0845941 (1797)	total: 13.6s	remaining: 35.9s
+2400:	learn: 0.0541859	test: 0.0847653	best: 0.0845931 (2203)	total: 14.8s	remaining: 34.6s
+2600:	learn: 0.0525790	test: 0.0849069	best: 0.0845931 (2203)	total: 16.1s	remaining: 33.4s
+bestTest = 0.08459311208
+bestIteration = 2203
+Shrink model to first 2204 iterations.
+  Fold 2 Balanced Accuracy: 0.971390
+
+Fold 3 / 5
+0:	learn: 1.0199458	test: 1.0201656	best: 1.0201656 (0)	total: 7.31ms	remaining: 58.5s
+200:	learn: 0.0935368	test: 0.0957021	best: 0.0957021 (200)	total: 1.32s	remaining: 51.2s
+400:	learn: 0.0848800	test: 0.0905678	best: 0.0905678 (400)	total: 2.56s	remaining: 48.4s
+600:	learn: 0.0789203	test: 0.0877692	best: 0.0877668 (599)	total: 3.79s	remaining: 46.7s
+800:	learn: 0.0742995	test: 0.0860070	best: 0.0860070 (800)	total: 5.03s	remaining: 45.2s
+1000:	learn: 0.0705246	test: 0.0849678	best: 0.0849678 (1000)	total: 6.26s	remaining: 43.8s
+1200:	learn: 0.0674840	test: 0.0840620	best: 0.0840620 (1200)	total: 7.49s	remaining: 42.4s
+1400:	learn: 0.0648173	test: 0.0837493	best: 0.0837452 (1398)	total: 8.72s	remaining: 41.1s
+1600:	learn: 0.0623115	test: 0.0833200	best: 0.0833117 (1553)	total: 9.95s	remaining: 39.8s
+1800:	learn: 0.0600413	test: 0.0831184	best: 0.0831021 (1767)	total: 11.2s	remaining: 38.5s
+2000:	learn: 0.0580076	test: 0.0829453	best: 0.0829328 (1992)	total: 12.4s	remaining: 37.3s
+2200:	learn: 0.0560893	test: 0.0828499	best: 0.0828288 (2179)	total: 13.7s	remaining: 36s
+2400:	learn: 0.0543993	test: 0.0828325	best: 0.0828124 (2397)	total: 14.9s	remaining: 34.8s
+2600:	learn: 0.0528509	test: 0.0828925	best: 0.0828124 (2397)	total: 16.2s	remaining: 33.6s
+2800:	learn: 0.0514568	test: 0.0830508	best: 0.0828124 (2397)	total: 17.4s	remaining: 32.3s
+bestTest = 0.08281239382
+bestIteration = 2397
+Shrink model to first 2398 iterations.
+  Fold 3 Balanced Accuracy: 0.972668
+
+Fold 4 / 5
+0:	learn: 1.0201254	test: 1.0199757	best: 1.0199757 (0)	total: 6.74ms	remaining: 53.9s
+200:	learn: 0.0940046	test: 0.0962919	best: 0.0962919 (200)	total: 1.3s	remaining: 50.6s
+400:	learn: 0.0847814	test: 0.0906560	best: 0.0906560 (400)	total: 2.52s	remaining: 47.8s
+600:	learn: 0.0786407	test: 0.0877836	best: 0.0877836 (600)	total: 3.75s	remaining: 46.2s
+800:	learn: 0.0739065	test: 0.0860207	best: 0.0860207 (800)	total: 4.98s	remaining: 44.8s
+1000:	learn: 0.0702882	test: 0.0850092	best: 0.0850024 (999)	total: 6.2s	remaining: 43.3s
+1200:	learn: 0.0671252	test: 0.0842541	best: 0.0842227 (1196)	total: 7.42s	remaining: 42s
+1400:	learn: 0.0644152	test: 0.0837160	best: 0.0837160 (1400)	total: 8.63s	remaining: 40.7s
+1600:	learn: 0.0617999	test: 0.0832483	best: 0.0832479 (1599)	total: 9.86s	remaining: 39.4s
+1800:	learn: 0.0595767	test: 0.0829212	best: 0.0829207 (1785)	total: 11.1s	remaining: 38.1s
+2000:	learn: 0.0575198	test: 0.0827159	best: 0.0827159 (2000)	total: 12.3s	remaining: 36.9s
+2200:	learn: 0.0556996	test: 0.0826660	best: 0.0826160 (2168)	total: 13.5s	remaining: 35.6s
+2400:	learn: 0.0541008	test: 0.0827126	best: 0.0826160 (2168)	total: 14.7s	remaining: 34.4s
+2600:	learn: 0.0526195	test: 0.0826732	best: 0.0826160 (2168)	total: 16s	remaining: 33.1s
+bestTest = 0.08261603617
+bestIteration = 2168
+Shrink model to first 2169 iterations.
+  Fold 4 Balanced Accuracy: 0.970617
+
+Fold 5 / 5
+0:	learn: 1.0199815	test: 1.0201803	best: 1.0201803 (0)	total: 7.97ms	remaining: 1m 3s
+200:	learn: 0.0944810	test: 0.0962878	best: 0.0962878 (200)	total: 1.31s	remaining: 50.9s
+400:	learn: 0.0850395	test: 0.0902184	best: 0.0902135 (399)	total: 2.55s	remaining: 48.3s
+600:	learn: 0.0788810	test: 0.0873997	best: 0.0873997 (600)	total: 3.78s	remaining: 46.6s
+800:	learn: 0.0745346	test: 0.0860994	best: 0.0860934 (799)	total: 4.99s	remaining: 44.8s
+1000:	learn: 0.0706637	test: 0.0850100	best: 0.0850100 (1000)	total: 6.21s	remaining: 43.4s
+1200:	learn: 0.0673033	test: 0.0841716	best: 0.0841716 (1200)	total: 7.43s	remaining: 42.1s
+1400:	learn: 0.0644474	test: 0.0837527	best: 0.0837489 (1399)	total: 8.65s	remaining: 40.8s
+1600:	learn: 0.0619423	test: 0.0833984	best: 0.0833969 (1599)	total: 9.88s	remaining: 39.5s
+1800:	learn: 0.0596716	test: 0.0832711	best: 0.0832706 (1793)	total: 11.1s	remaining: 38.2s
+2000:	learn: 0.0577146	test: 0.0832478	best: 0.0832389 (1997)	total: 12.3s	remaining: 37s
+2200:	learn: 0.0558639	test: 0.0832499	best: 0.0832389 (2034)	total: 13.6s	remaining: 35.7s
+2400:	learn: 0.0542075	test: 0.0833896	best: 0.0832389 (2034)	total: 14.8s	remaining: 34.5s
+bestTest = 0.08323885147
+bestIteration = 2034
+Shrink model to first 2035 iterations.
+  Fold 5 Balanced Accuracy: 0.971167
+
+Overall OOF Balanced Accuracy: 0.971072
+OOF predictions saved to /media/oscarm524/Expansion/Kaggle/2026/PS_Ep4/Version_2/CatBoost/cat_6_oof.csv
+Test predicted likelihoods saved to /media/oscarm524/Expansion/Kaggle/2026/PS_Ep4/Version_2/CatBoost/cat_6_test.csv
+
+Submission saved to /media/oscarm524/Expansion/Kaggle/2026/PS_Ep4/Version_2/CatBoost/cat_6.csv

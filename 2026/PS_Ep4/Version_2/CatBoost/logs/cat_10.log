@@ -1,0 +1,70 @@
+Fold 1 / 5
+0:	learn: 0.9572444	test: 0.9577097	best: 0.9577097 (0)	total: 17.1ms	remaining: 1m 25s
+100:	learn: 0.0789237	test: 0.0997808	best: 0.0997808 (100)	total: 1.24s	remaining: 1m
+200:	learn: 0.0645492	test: 0.0957464	best: 0.0957464 (200)	total: 2.39s	remaining: 57.2s
+300:	learn: 0.0571070	test: 0.0949199	best: 0.0948853 (297)	total: 3.53s	remaining: 55.1s
+400:	learn: 0.0521504	test: 0.0951098	best: 0.0948311 (318)	total: 4.67s	remaining: 53.5s
+500:	learn: 0.0486143	test: 0.0956074	best: 0.0948311 (318)	total: 5.79s	remaining: 52s
+600:	learn: 0.0458138	test: 0.0961348	best: 0.0948311 (318)	total: 6.91s	remaining: 50.6s
+bestTest = 0.09483108835
+bestIteration = 318
+Shrink model to first 319 iterations.
+  Fold 1 Balanced Accuracy: 0.967523
+
+Fold 2 / 5
+0:	learn: 0.9573172	test: 0.9575425	best: 0.9575425 (0)	total: 14.1ms	remaining: 1m 10s
+100:	learn: 0.0793341	test: 0.0963939	best: 0.0963939 (100)	total: 1.23s	remaining: 59.9s
+200:	learn: 0.0650632	test: 0.0919560	best: 0.0919560 (200)	total: 2.39s	remaining: 57.1s
+300:	learn: 0.0574933	test: 0.0906014	best: 0.0905844 (297)	total: 3.53s	remaining: 55s
+400:	learn: 0.0522703	test: 0.0900955	best: 0.0900231 (343)	total: 4.66s	remaining: 53.5s
+500:	learn: 0.0486829	test: 0.0905333	best: 0.0900231 (343)	total: 5.79s	remaining: 52s
+600:	learn: 0.0458146	test: 0.0909493	best: 0.0900231 (343)	total: 6.9s	remaining: 50.5s
+bestTest = 0.09002312214
+bestIteration = 343
+Shrink model to first 344 iterations.
+  Fold 2 Balanced Accuracy: 0.970471
+
+Fold 3 / 5
+0:	learn: 0.9573181	test: 0.9573314	best: 0.9573314 (0)	total: 13.8ms	remaining: 1m 8s
+100:	learn: 0.0800291	test: 0.0953057	best: 0.0953057 (100)	total: 1.24s	remaining: 1m
+200:	learn: 0.0655330	test: 0.0905977	best: 0.0905977 (200)	total: 2.4s	remaining: 57.3s
+300:	learn: 0.0577856	test: 0.0892156	best: 0.0892047 (299)	total: 3.53s	remaining: 55.2s
+400:	learn: 0.0528335	test: 0.0889370	best: 0.0887079 (369)	total: 4.67s	remaining: 53.5s
+500:	learn: 0.0491228	test: 0.0890106	best: 0.0887079 (369)	total: 5.79s	remaining: 52s
+600:	learn: 0.0461039	test: 0.0891241	best: 0.0887079 (369)	total: 6.92s	remaining: 50.6s
+bestTest = 0.08870786509
+bestIteration = 369
+Shrink model to first 370 iterations.
+  Fold 3 Balanced Accuracy: 0.970756
+
+Fold 4 / 5
+0:	learn: 0.9573430	test: 0.9574346	best: 0.9574346 (0)	total: 13.4ms	remaining: 1m 7s
+100:	learn: 0.0791369	test: 0.0942405	best: 0.0942405 (100)	total: 1.25s	remaining: 1m
+200:	learn: 0.0651010	test: 0.0896907	best: 0.0896907 (200)	total: 2.41s	remaining: 57.6s
+300:	learn: 0.0577228	test: 0.0881466	best: 0.0881466 (300)	total: 3.55s	remaining: 55.5s
+400:	learn: 0.0526077	test: 0.0876837	best: 0.0876551 (398)	total: 4.68s	remaining: 53.7s
+500:	learn: 0.0489908	test: 0.0879707	best: 0.0876551 (398)	total: 5.8s	remaining: 52.1s
+600:	learn: 0.0460875	test: 0.0884665	best: 0.0876551 (398)	total: 6.93s	remaining: 50.7s
+bestTest = 0.08765505576
+bestIteration = 398
+Shrink model to first 399 iterations.
+  Fold 4 Balanced Accuracy: 0.969999
+
+Fold 5 / 5
+0:	learn: 0.9573782	test: 0.9575047	best: 0.9575047 (0)	total: 13.8ms	remaining: 1m 8s
+100:	learn: 0.0793624	test: 0.0956358	best: 0.0956358 (100)	total: 1.24s	remaining: 1m
+200:	learn: 0.0651934	test: 0.0909593	best: 0.0909593 (200)	total: 2.4s	remaining: 57.3s
+300:	learn: 0.0577135	test: 0.0898084	best: 0.0897517 (294)	total: 3.54s	remaining: 55.3s
+400:	learn: 0.0526256	test: 0.0893914	best: 0.0893431 (397)	total: 4.67s	remaining: 53.6s
+500:	learn: 0.0489306	test: 0.0896763	best: 0.0893431 (397)	total: 5.8s	remaining: 52.1s
+600:	learn: 0.0460363	test: 0.0903961	best: 0.0893431 (397)	total: 6.93s	remaining: 50.7s
+bestTest = 0.0893431233
+bestIteration = 397
+Shrink model to first 398 iterations.
+  Fold 5 Balanced Accuracy: 0.969339
+
+Overall OOF Balanced Accuracy: 0.969618
+OOF predictions saved to /media/oscarm524/Expansion/Kaggle/2026/PS_Ep4/Version_2/CatBoost/cat_10_oof.csv
+Test predicted likelihoods saved to /media/oscarm524/Expansion/Kaggle/2026/PS_Ep4/Version_2/CatBoost/cat_10_test.csv
+
+Submission saved to /media/oscarm524/Expansion/Kaggle/2026/PS_Ep4/Version_2/CatBoost/cat_10.csv
